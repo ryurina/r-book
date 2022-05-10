@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import '@splidejs/react-splide/css'
 
 function Home() {
   const [popular, setPopular] = useState([]);
@@ -28,14 +30,24 @@ function Home() {
       <br/>
       <hr/>
       <br/>
-      {popular.map((book) => {
-        return (
-          <div key={book.key} className="books_map">
-            <p>{book.title}</p>
-            <img src={`https://covers.openlibrary.org/b/olid/${book.cover_edition_key}-M.jpg`}/>
-          </div>
-        )
-      })}
+      <Splide options={{
+        perPage: 4,
+        arrows: false,
+        pagination: false,
+        drag: 'free',
+        gap: '15px'
+      }}>
+        {popular.map((book) => {
+          return (
+            <SplideSlide>
+              <div key={book.key} className="books_map">
+                <p>{book.title}</p>
+                <img src={`https://covers.openlibrary.org/b/olid/${book.cover_edition_key}-M.jpg`} alt={book.title}/>
+              </div>
+            </SplideSlide>
+          )
+        })}
+      </Splide>
     </div>
     </>
   )

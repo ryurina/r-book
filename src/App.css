@@ -85,3 +85,12 @@ nav li a:hover{
 .popular_book h1{
   color: #f8f8f2;
 }
+
+.books_map p{
+  text-align: center;
+  color: #f8f8f2;
+}
+.books_map img{
+  width: 100%;
+  height: 400px;
+}
