@@ -86,9 +86,44 @@ nav li a:hover{
   color: #f8f8f2;
 }
 
-.books_map p{
-  text-align: center;
+.books_map{
+  position: relative;
+}
+
+.books_map .book_about{
   color: #f8f8f2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(40, 42, 54, 0.6);
+  width: 100%;
+  height: 400px;
+  opacity: 0;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.book_about p{
+  color: #f8f8f2;
+  font-size: 25px;
+  padding: 7px 0px;
+}
+.book_about a{
+  color: #44475a;
+  padding: 7px 21px;
+  background-color: #50fa7b;
+  text-decoration: none;
+  border-radius: 3px;
+}
+.book_about a:hover{
+  color: #f8f8f2;
+  background-color: #349e4f;
+}
+.books_map .book_about:hover{
+  opacity: 1;
 }
 .books_map img{
   width: 100%;

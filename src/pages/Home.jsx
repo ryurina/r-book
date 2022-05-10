@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
+import noCover from '../assets/img/noCover.jpg'
 
 function Home() {
   const [popular, setPopular] = useState([]);
@@ -41,7 +42,10 @@ function Home() {
           return (
             <SplideSlide>
               <div key={book.key} className="books_map">
-                <p>{book.title}</p>
+                <div className="book_about">
+                  <p>{book.title}</p>
+                  <a href="#">Read more</a>
+                </div>
                 <img src={`https://covers.openlibrary.org/b/olid/${book.cover_edition_key}-M.jpg`} alt={book.title}/>
               </div>
             </SplideSlide>
