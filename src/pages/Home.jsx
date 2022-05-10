@@ -46,7 +46,7 @@ function Home() {
                   <p>{book.title}</p>
                   <a href="#">Read more</a>
                 </div>
-                <img src={`https://covers.openlibrary.org/b/olid/${book.cover_edition_key}-M.jpg`} alt={book.title}/>
+                <img src={book.cover_id == null ? noCover : `https://covers.openlibrary.org/b/olid/${book.cover_edition_key}-M.jpg`} alt={book.title}/>
               </div>
             </SplideSlide>
           )
