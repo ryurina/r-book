@@ -1,9 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin-left: 25px;
+  margin-right: 25px;
+  background-color: #282a36;
+}
 nav{
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: #282a36;
   color: #f8f8f2;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
 }
 nav h1 a{
@@ -25,4 +39,49 @@ nav li a{
 }
 nav li a:hover{
   color: #ff79c6;
+}
+.HomeLanding{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.home_landing{
+  min-width: 100%;
+  width: 100%;
+  height: 500px;
+  background-image: url('./assets/img/book_wallpaper.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: 100% 500px;
+  color: #f8f8f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+.home_landing div{
+  text-align: center;
+}
+.button_landing{
+  display: flex;
+  justify-content: space-evenly;
+}
+.button_landing a{
+  text-decoration: none;
+  color: #44475a;
+  background-color: #50fa7b;
+  padding: 7px 21px;
+  border-radius: 5px;
+}
+.button_landing a:hover{
+  color: #f8f8f2;
+  background-color: #349e4f;
+}
+
+.popular_book{
+  padding: 10px 50px;
+  
+}
+.popular_book h1{
+  color: #f8f8f2;
 }
